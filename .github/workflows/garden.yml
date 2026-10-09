@@ -1,0 +1,44 @@
+name: Garden
+
+# Visitors plant flowers from the profile: each colour links to a new issue
+# titled "garden: plant <colour>". This plants it (scripts/garden.mjs),
+# commits the redrawn garden and closes the issue. The title is only read
+# inside Node, never pasted into a shell.
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+# One gardener at a time. Every run plants all open garden issues, so a run
+# that gets skipped while another is busy loses nothing.
+concurrency:
+  group: garden
+  cancel-in-progress: false
+
+jobs:
+  plant:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'garden:')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      # The font, the mark and the colours come from the website's own code.
+      - uses: actions/checkout@v4
+        with:
+          repository: JP-Alchemy/CV
+          path: site
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Plant
+        run: node scripts/garden.mjs plant
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SITE_DIR: site
