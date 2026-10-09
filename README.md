@@ -6,7 +6,7 @@
   </picture>
 </a>
 
-I'm JP, a South African creative technologist living in Leiden. By day I'm Tech Lead of Sustainability at [Interfood](https://jpbothma.com/work/interfarm/), turning dairy customers' climate targets into work on actual farms. Around that I build interactive worlds and games, make data legible, and ship AI agents that quietly take care of the repetitive, so people keep the parts that need a human. I'd like to build more of that: human-centred systems in a world of agents, and technology that brings people a little closer to nature.
+I'm JP, a South African creative technologist living in Amsterdam. By day I'm Tech Lead of Sustainability at [Interfood](https://jpbothma.com/work/interfarm/), turning dairy customers' climate targets into work on actual farms. Around that I build interactive worlds and games, make data legible, and ship AI agents that quietly take care of the repetitive, so people keep the parts that need a human. I'd like to build more of that: human-centred systems in a world of agents, and technology that brings people a little closer to nature.
 
 **[jpbothma.com](https://jpbothma.com)** · [CV](https://jpbothma.com/cv/) · [LinkedIn](https://www.linkedin.com/in/jp-bothma) · [Work with me](https://jpbothma.com/services/)
 
